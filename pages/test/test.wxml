@@ -1,0 +1,26 @@
+<!--pages/test/test.wxml-->
+<view class="page" hover='true' hover-stay-time="20000">
+  <view class='page__hd'>
+    <view class="page__title">{{index+1}}、{{questionDetail}}</view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioBind">
+        <view class="weui-cell " hover-class="weui-cell_active" >
+          <radio value="{{options[answerArrays[0]]}}" checked='{{isSelected}}'>A、{{options[answerArrays[0]]}}</radio>
+        </view>
+        <view class="weui-cell " hover-class="weui-cell_active" >
+          <radio value="{{options[answerArrays[1]]}}" checked='{{isSelected}}'>B、{{options[answerArrays[1]]}}</radio>
+        </view>
+        <view class="weui-cell " hover-class="weui-cell_active" >
+          <radio value="{{options[answerArrays[2]]}}" checked='{{isSelected}}'>C、{{options[answerArrays[2]]}}</radio>
+        </view>
+        <view class="weui-cell " hover-class="weui-cell_active" >
+          <radio value="{{options[answerArrays[3]]}}" checked='{{isSelected}}'>D、{{options[answerArrays[3]]}}</radio>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+</view>
