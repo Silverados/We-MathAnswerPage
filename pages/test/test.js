@@ -41,20 +41,15 @@ Page({
     var value = event.detail.value;
     var trueOption = app.globalData.questions[this.data.realIndex].true;
     var trueVaule = app.globalData.questions[this.data.realIndex].option[trueOption];
-   
-    if (this.data.index == this.data.questionArrays.length - 1) {
-      wx.navigateTo({
-        url: '/pages/result/result?wrong=' + this.data.wrong
+    console.log("选择的值" + value);
+    console.log("本题乱序前的选项是：" + trueOption + "值是:" + trueVaule);
+    if (value != trueVaule) {
+      this.setData({
+        wrong: this.data.wrong + 1
       })
-    } else {
-      // console.log("选择的值"+value);
-      // console.log("本题乱序前的选项是：" + trueOption +"值是:"+trueVaule);
-      if (value != trueVaule) {
-        this.setData({
-          wrong: this.data.wrong + 1
-        })
-      }
+    }
 
+    if (this.data.index < this.data.questionArrays.length - 1 ) {
       this.setData({
         isSelected: false,
         index: this.data.index + 1,
@@ -66,8 +61,13 @@ Page({
         questionDetail: app.globalData.questions[this.data.realIndex].question,
         options: app.globalData.questions[this.data.realIndex].option
       })
-      console.log("选择后的index:" + this.data.index);
-      console.log("选择后的realIndex:" + this.data.realIndex);
+      // console.log("选择后的index:" + this.data.index);
+      // console.log("选择后的realIndex:" + this.data.realIndex);
+    } else {
+      wx.navigateTo({
+        url: '/pages/result/result?wrong=' + this.data.wrong
+      })
+      
     }
   },
   /**
