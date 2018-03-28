@@ -38,52 +38,56 @@ Page({
   },
   //点击选项触发函数
   select: function (event) {
-    console.log(event);
-    var value = event.currentTarget.dataset.value;
-    var chooseOption = event.currentTarget.dataset.option;
-    var trueOption = app.globalData.questions[this.data.realIndex].true;
-    var trueVaule = app.globalData.questions[this.data.realIndex].option[trueOption];
 
-    
+    setTimeout(function () {
+    this.setData({
+      icon: ["circle", "circle", "circle", "circle"]
+    })
+    }.bind(this), 400);
+      var value = event.currentTarget.dataset.value;
+      var chooseOption = event.currentTarget.dataset.option;
+      var trueOption = app.globalData.questions[this.data.realIndex].true;
+      var trueVaule = app.globalData.questions[this.data.realIndex].option[trueOption];
+      console.log("选择的选项是：" + chooseOption + " 选择的值：" + value);
+      console.log("本题乱序前的选项是：" + trueOption + " 值是:" + trueVaule);
 
-    console.log("选择的选项是：" + chooseOption +" 选择的值：" + value);
-    console.log("本题乱序前的选项是：" + trueOption + " 值是:" + trueVaule);
-    if (value != trueVaule) {
-      var icons = ["circle", "circle", "circle", "circle"];
-      icons[chooseOption] = "cancel";
-      this.setData({
-        icon:icons,
-        wrong: this.data.wrong + 1
-      })
-    } else {
-      var icons = ["circle", "circle", "circle", "circle"];
-      icons[chooseOption] = "success";
-      this.setData({
-        icon:icons
-      })
-    }
+      if (value != trueVaule) {
+        var icons = ["circle", "circle", "circle", "circle"];
+        icons[chooseOption] = "cancel";
+        this.setData({
+          icon: icons,
+          wrong: this.data.wrong + 1
+        })
+      } else {
+        var icons = ["circle", "circle", "circle", "circle"];
+        icons[chooseOption] = "success";
+        this.setData({
+          icon: icons
+        })
+      }
 
-    if (this.data.index < this.data.questionArrays.length - 1) {
-      this.setData({
-        isSelected: false,
-        index: this.data.index + 1,
-      })
-      this.setData({
-        realIndex: this.data.questionArrays[this.data.index]
-      })
-      this.setData({
-        questionDetail: app.globalData.questions[this.data.realIndex].question,
-        options: app.globalData.questions[this.data.realIndex].option
-      })
-      // console.log("选择后的index:" + this.data.index);
-      // console.log("选择后的realIndex:" + this.data.realIndex);
-    } else {
-      
-      wx.navigateTo({
-        url: '/pages/result/result?wrong=' + this.data.wrong
-      })
+      if (this.data.index < this.data.questionArrays.length - 1) {
+        this.setData({
+          isSelected: false,
+          index: this.data.index + 1,
+        })
+        this.setData({
+          realIndex: this.data.questionArrays[this.data.index]
+        })
+        this.setData({
+          questionDetail: app.globalData.questions[this.data.realIndex].question,
+          options: app.globalData.questions[this.data.realIndex].option
+        })
+        // console.log("选择后的index:" + this.data.index);
+        // console.log("选择后的realIndex:" + this.data.realIndex);
+      } else {
 
-    }
+        wx.navigateTo({
+          url: '/pages/result/result?wrong=' + this.data.wrong
+        })
+
+      }
+
   },
   /**
    * 生命周期函数--监听页面加载
