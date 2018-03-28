@@ -6,20 +6,24 @@
 
   <view class="page__bd">
     <view class="weui-cells weui-cells_after-title">
-      <radio-group bindchange="radioBind">
-        <view class="weui-cell " hover-class="weui-cell_active" >
-          <radio value="{{options[answerArrays[0]]}}" checked='{{isSelected}}'>A、{{options[answerArrays[0]]}}</radio>
-        </view>
-        <view class="weui-cell " hover-class="weui-cell_active" >
-          <radio value="{{options[answerArrays[1]]}}" checked='{{isSelected}}'>B、{{options[answerArrays[1]]}}</radio>
-        </view>
-        <view class="weui-cell " hover-class="weui-cell_active" >
-          <radio value="{{options[answerArrays[2]]}}" checked='{{isSelected}}'>C、{{options[answerArrays[2]]}}</radio>
-        </view>
-        <view class="weui-cell " hover-class="weui-cell_active" >
-          <radio value="{{options[answerArrays[3]]}}" checked='{{isSelected}}'>D、{{options[answerArrays[3]]}}</radio>
-        </view>
-      </radio-group>
+
+      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[0]]}}" data-option='0'>
+        <icon type="{{icon[0]}}" size="23"></icon>
+        <view>A、{{options[answerArrays[0]]}}</view>
+      </view>
+      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[1]]}}" data-option='1'>
+        <icon type="{{icon[1]}}" size="23"></icon>
+        <view>B、{{options[answerArrays[1]]}}</view>
+      </view>
+      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[2]]}}" data-option='2'>
+        <icon type="{{icon[2]}}" size="23"></icon>
+        <view>C、{{options[answerArrays[2]]}}</view>
+      </view>
+      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[3]]}}" data-option='3'>
+        <icon type="{{icon[3]}}" size="23"></icon>
+        <view>D、{{options[answerArrays[3]]}}</view>
+      </view>
+
     </view>
   </view>
 
