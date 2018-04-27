@@ -1,8 +1,4 @@
-/*!
- * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
- * Copyright 2017 Tencent, Inc.
- * Licensed under the MIT license
- */
+
 
 page {
   line-height: 1.6;
@@ -16,7 +12,7 @@ icon {
 .weui-cells {
   position: relative;
   margin-top: 1.17647059em;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   line-height: 1.41176471;
   font-size: 17px;
 }

@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/test/test",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/wrongAnswer/wrongAnswer"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#99ffcc",
+    "navigationBarTitleText": "小学五年级数学测试",
     "navigationBarTextStyle": "black"
   }
 }

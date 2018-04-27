@@ -1,27 +1,37 @@
 <!--pages/test/test.wxml-->
+
 <view class="page" hover='true' hover-stay-time="20000">
   <view class='page__hd'>
-    <view class="page__title">{{index+1}}、{{questionDetail}}</view>
+    <view class="page__title">{{index+1}}、
+      <view class='page_title_question'><image wx:if="{{questionImage!=''}}" src="{{questionImage}}" class='myimage' mode="widthFix"></image></view>
+    </view>
   </view>
 
   <view class="page__bd">
     <view class="weui-cells weui-cells_after-title">
 
-      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[0]]}}" data-option='0'>
-        <icon type="{{icon[0]}}" size="23"></icon>
-        <view>A、{{options[answerArrays[0]]}}</view>
+    <!-- 判断选项个数是3个还是4还是6个 -->
+      <view wx:if="{{optionnumber == '3'}}">
+          <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays1[index]]}}" data-option="{{index}}" wx:for="{{answerArrays1}}" wx:key="index">
+        <icon type="{{icon[index]}}" size="23"></icon>
+        <view>{{myoption[index]}}、<image  src="{{options[answerArrays1[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
       </view>
-      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[1]]}}" data-option='1'>
-        <icon type="{{icon[1]}}" size="23"></icon>
-        <view>B、{{options[answerArrays[1]]}}</view>
+
+      <view wx:elif="{{optionnumber == '4'}}">
+          <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays2[index]]}}" data-option="{{index}}" wx:for="{{answerArrays2}}" wx:key="index">
+          
+        <icon type="{{icon[index]}}" size="23"></icon>
+        <view class='myFloat'>{{myoption[index]}}、<image src="{{options[answerArrays2[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
       </view>
-      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[2]]}}" data-option='2'>
-        <icon type="{{icon[2]}}" size="23"></icon>
-        <view>C、{{options[answerArrays[2]]}}</view>
-      </view>
-      <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays[3]]}}" data-option='3'>
-        <icon type="{{icon[3]}}" size="23"></icon>
-        <view>D、{{options[answerArrays[3]]}}</view>
+
+      <view wx:else>
+          <view class="weui-cell " hover-class="weui-cell_active" bindtap='select' data-value="{{options[answerArrays3[index]]}}" data-option="{{index}}" wx:for="{{answerArrays3}}" wx:key="index">
+      
+        <icon type="{{icon[index]}}" size="23"></icon>
+        <view>{{myoption[index]}}、<image  src="{{options[answerArrays3[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
       </view>
 
     </view>

@@ -1,0 +1,48 @@
+<view class="page" hover='true' hover-stay-time="20000" >
+  <view class='page__hd'>
+    <view class="page__title">{{indexs+1}}、
+    <view class='page_title_question'><image wx:if="{{wrongquestionImage!=''}}" src="{{wrongquestionImage}}" class='myimage'  mode="widthFix"></image></view>
+      
+    </view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+
+      <view wx:if="{{wrongoptionnumber == '3'}}">
+          <view class="weui-cell "  wx:for="{{answerArrays1}}" wx:key="index">
+          
+        <view>{{myoption[index]}}、<image  src="{{wrongoptions[answerArrays1[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
+      </view>
+
+      <view wx:elif="{{wrongoptionnumber == '4'}}">
+          <view class="weui-cell "  wx:for="{{answerArrays2}}" wx:key="index">  
+          
+        <view>{{myoption[index]}}、<image  src="{{wrongoptions[answerArrays2[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
+      </view>
+
+      <view wx:else>
+          <view class="weui-cell "  wx:for="{{answerArrays3}}" wx:key="index">
+        
+        <view>{{myoption[index]}}、<image  src="{{wrongoptions[answerArrays3[index]]}}" class='myoptionimage' mode="widthFix"></image></view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='page_ft'>
+     <view>
+        <view class='wronganswer'><text>您的答案为{{wrongList[indexs].wrongOption}}</text></view>
+        <view class='trueanswer'><text>正确答案为{{myoption[trueoption[indexs]]}}</text></view>
+      </view>
+
+      <view class='mybutton'>
+        <button bindtap='goFirst'  wx:if="{{indexs == wrongList.length-1}}">返回首页</button>
+        <button bindtap='next' wx:else>下一题</button>
+        
+      </view>
+  </view>
+</view>

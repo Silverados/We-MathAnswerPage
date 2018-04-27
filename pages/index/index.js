@@ -11,11 +11,33 @@ Page({
   },
   //事件处理函数
   beginAnswer: function () {
+    
     wx.navigateTo({
       url: '../test/test'
     })
   },
+  
   onLoad: function () {
+    /* 请求数据 */
+    wx.request({
+      url: 'http://111.230.50.64:8080/WxMath/ServletTest',
+      data: {
+
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        //var questionList = [];
+        app.globalData.questions = res.data;
+        console.log(res.data);
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      }
+    })
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

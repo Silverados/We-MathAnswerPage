@@ -1,0 +1,5 @@
+<!--pages/conn/conn.wxml-->
+<text>pages/conn/conn.wxml</text>
+<view>
+  <button bindtap='bindtest'>test</button>
+</view>
