@@ -1,5 +1,3 @@
-# We-MathAnswerPage
-a wechat Mini Program with a simple math answer page(一个拥有简单数学答题页面的微信小程序)
 项目地址： https://github.com/Silverados/We-MathAnswerPage
 
 自从一个月前更新完，期间虽然一直都在写代码，但是前端展示部分交给了另外一个同学写，自己跑去写了服务器。
@@ -35,4 +33,12 @@ a wechat Mini Program with a simple math answer page(一个拥有简单数学答
 ```json
 {"question": "http://111.230.50.64:8080/usr/tomcat/webapps/WxMath/image/80-q.png","option": {"A": "http://111.230.50.64:8080/usr/tomcat/webapps/WxMath/image/80-a.png", "B": "http://111.230.50.64:8080/usr/tomcat/webapps/WxMath/image/80-b.png", "C": "http://111.230.50.64:8080/usr/tomcat/webapps/WxMath/image/80-c.png", "D": "http://111.230.50.64:8080/usr/tomcat/webapps/WxMath/image/80-d.png" }, "true": "A", "number":"4" }
 ```
-10.服务器端将数据写入mysql数据库和将图片上传到服务器的代码、博客过段时间再更新。https://blog.csdn.net/saywhat_sayhello
+10.服务器端将数据写入mysql数据库和将图片上传到服务器的代码、博客过段时间再更新。
+
+11.这里一定要注意，因为这个版本是使用网络的，其中在index.js里使用wx.request向服务器发送了请求，返回的json数据同时setData，如果想单机的话就去掉这段话，参考上一个版本写。
+
+
+这里给出图片资源有需要的下载！：https://download.csdn.net/download/saywhat_sayhello/10379653
+如果有不会GitHub的，可以在CSDN下载：https://download.csdn.net/download/saywhat_sayhello/10379662
+
+如果有疑问的我会的，评论了我会回答的。
