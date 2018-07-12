@@ -1,17 +1,20 @@
+博客地址：https://blog.csdn.net/saywhat_sayhello/article/details/80110735#comments
+用上面地址查看这篇readme更佳，主要是图片问题。。
+
 项目地址： https://github.com/Silverados/We-MathAnswerPage
 
 自从一个月前更新完，期间虽然一直都在写代码，但是前端展示部分交给了另外一个同学写，自己跑去写了服务器。
 
 以下是成果展示：
-![这里写图片描述](https://img-blog.csdn.net/20180427165847236?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://img-blog.csdn.net/20180427165847236?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-![这里写图片描述](https://img-blog.csdn.net/2018042716590011?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+(https://img-blog.csdn.net/2018042716590011?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-![这里写图片描述](https://img-blog.csdn.net/20180427165912653?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+(https://img-blog.csdn.net/20180427165912653?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-![这里写图片描述](https://img-blog.csdn.net/20180427165924469?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+(https://img-blog.csdn.net/20180427165924469?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-![这里写图片描述](https://img-blog.csdn.net/20180427165934489?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+(https://img-blog.csdn.net/20180427165934489?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NheVdoYXRfc2F5SGVsbG8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 1.题目一般是4题，但是可以不定为4题，从数组中获取选项对象时获取其长度。
 
