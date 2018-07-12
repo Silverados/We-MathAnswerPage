@@ -1,4 +1,4 @@
-博客地址：https://blog.csdn.net/saywhat_sayhello/article/details/80110735#comments
+博客地址：https://blog.csdn.net/saywhat_sayhello/article/details/80110735
 用上面地址查看这篇readme更佳，主要是图片问题。。
 
 项目地址： https://github.com/Silverados/We-MathAnswerPage
